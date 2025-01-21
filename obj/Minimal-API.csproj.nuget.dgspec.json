@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\Minimal-API.csproj": {}
+    "c:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\Minimal-API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\Minimal-API.csproj": {
+    "c:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\Minimal-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\Minimal-API.csproj",
+        "projectUniqueName": "c:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\Minimal-API.csproj",
         "projectName": "Minimal-API",
-        "projectPath": "C:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\Minimal-API.csproj",
+        "projectPath": "c:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\Minimal-API.csproj",
         "packagesPath": "C:\\Users\\isaac\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\obj\\",
+        "outputPath": "c:\\Users\\isaac\\OneDrive\\Área de Trabalho\\NewWorld\\MinialAPIs\\Minimal-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -69,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[7.2.0, )"
             }
           },
           "imports": [

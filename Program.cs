@@ -1,21 +1,37 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Minimal_API.Dominio.DTOs;
+using Minimal_API.Dominio.Interfaces;
+using Minimal_API.Dominio.Servicos;
+using Minimal_API.Infra.Db;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddScoped<IAdministradorServico, AdminstradorServico>();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+builder.Services.AddDbContext<DbContexto>(options =>
+options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
+
 var app = builder.Build();
 
-app.MapGet("/", () => "Hello World!");
 
-app.MapPost("/login", (LoginDTO loginDTO) => 
+app.MapPost("/login", ([FromBody] LoginDTO loginDTO, IAdministradorServico administradorServico) => 
 {
-    if (loginDTO.Email == "adm@teste.com" && loginDTO.Senha == "123456")
+    if (administradorServico.Login(loginDTO) != null)
     {
         return Results.Ok("Login efetuado com sucesso!");
     }
     else
     {
-        return Results.BadRequest("Usuário ou senha inválidos!");
+        return Results.Unauthorized();
     }     
 });
+
+app.UseSwagger();
+app.UseSwaggerUI();
 
 app.Run();
 
